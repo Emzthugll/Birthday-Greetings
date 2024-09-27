@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Candle Blow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./cake.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        text-align: center;
+      }
+
+      button {
+        background-color: #a955ff; /* Your button color */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .link-container {
+        text-align: center; /* Center the link */
+        margin-top: 20px; /* Add some spacing above */
+      }
+
+      .link-container a {
+        color: #4c68d7; /* Instagram Blue */
+        text-decoration: none;
+        font-size: 18px; /* Adjust font size as needed */
+      }
+
+      .link-container a:hover {
+        text-decoration: underline; /* Underline on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="candle-count-display"
+      id="birthdayMessage"
+      style="display: none"
+    >
+      HAPPY BIRTHDAY BABE!
+    </div>
+
+    <div class="cake">
+      <div id="candleCount" style="display: none"></div>
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip3"></div>
+    </div>
+
+    <!-- New div for the anchor tag -->
+    <div class="link-container">
+      <a href="wish.html" target="_blank">Make a Wish!</a>
+    </div>
+
+    <!-- Modal for instructions -->
+    <div class="modal" id="instructionsModal">
+      <div class="modal-content">
+        <h2>Instructions</h2>
+        <ul>
+          <li>1. Wear your Earphones!!!</li>
+          <li>2. Click on the Cake to put candles on it.</li>
+          <li>
+            3. Then blow hard the candles using the mic of your
+            earphone/headphone.
+          </li>
+          <li>4. After that click Make a wish.</li>
+        </ul>
+        <button id="okButton">Okay</button>
+      </div>
+    </div>
+
+    <script src="cake.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2"></script>
+    <script>
+      // Show the modal when the page loads
+      window.onload = function () {
+        const modal = document.getElementById("instructionsModal");
+        modal.style.display = "block"; // Show the modal when the page loads
+
+        const okButton = document.getElementById("okButton");
+        okButton.onclick = function () {
+          modal.style.display = "none"; // Hide the modal when the button is clicked
+        };
+      };
+    </script>
+  </body>
+</html>

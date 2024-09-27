@@ -1,0 +1,83 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #cca3ff;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.modal__header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.input__label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.input__field {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.75rem;
+}
+
+.input__field--textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal__footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background-color: #007dab;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #006489;
+}

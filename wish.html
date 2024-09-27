@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Wish Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="wish.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="modal">
+        <div class="modal__header">
+          <span class="modal__title">Birthday Wish</span>
+        </div>
+        <form
+          action="https://formspree.io/f/xldrqgbg"
+          method="POST"
+          class="modal__body"
+        >
+          <div class="input">
+            <label class="input__label">Input your Birthday Wish</label>
+            <textarea
+              class="input__field input__field--textarea"
+              id="wish"
+              name="wish"
+            ></textarea>
+          </div>
+          <div class="modal__footer">
+            <button type="submit" class="button button--primary">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="wish.js"></script>
+  </body>
+</html>
